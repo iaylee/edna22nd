@@ -19,34 +19,16 @@
 
   <main>
     <div class="stage">
-      <section class="birthday-envelope-scene" id="birthday-envelope-scene"
-               aria-label="Interactive birthday letter">
-        <p class="birthday-envelope-intro" id="envelope-intro">
-          A little something for you
-          <span>Tap the wax seal to open your letter</span>
-        </p>
-
-        <div class="birthday-envelope" id="envelope">
-          <article class="birthday-letter" id="letter">
-            <div class="birthday-letter-content">
-              <p class="birthday-letter-greeting">Dear you,</p>
-              <p id="letter-text"></p>
-              <p class="birthday-letter-signoff">With love ♡</p>
-            </div>
-            <span class="birthday-letter-handle" aria-hidden="true">↕</span>
-          </article>
-
-          <div class="birthday-envelope-back" aria-hidden="true"></div>
-          <div class="birthday-envelope-pocket" aria-hidden="true"></div>
-          <div class="birthday-envelope-flap" aria-hidden="true"></div>
-          <button class="birthday-wax-seal" id="letter-tab" type="button"
-                  aria-label="Open your birthday letter" aria-expanded="false">♡</button>
-        </div>
-
-        <p class="birthday-envelope-hint" id="hint" aria-live="polite">
-          Tap the wax seal to open ♡
-        </p>
-      </section>
+      <div class="envelope" id="envelope">
+        <div class="envelope-back" aria-hidden="true"></div>
+        <article class="letter" id="letter">
+          <p id="letter-text"></p>
+          <button class="tab" id="letter-tab" type="button" aria-expanded="false">pull</button>
+        </article>
+        <div class="pocket" aria-hidden="true"></div>
+        <div class="flap" aria-hidden="true"></div>
+      </div>
+      <p class="hint" id="hint">drag the tab</p>
     </div>
   </main>
 
