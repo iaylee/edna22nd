@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#C9B4E8">
+  <title>Happy Birthday</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Silkscreen&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="top">
+    <canvas id="sprite-rabbit" class="sprite" width="64" height="64" aria-hidden="true"></canvas>
+    <h1>HAPPY<br>BIRTHDAY</h1>
+    <canvas id="sprite-beagle" class="sprite" width="64" height="64" aria-hidden="true"></canvas>
+  </header>
+
+  <main>
+    <div class="stage">
+      <div class="envelope" id="envelope">
+        <div class="envelope-back" aria-hidden="true"></div>
+        <article class="letter" id="letter">
+          <p id="letter-text"></p>
+          <button class="tab" id="letter-tab" type="button" aria-expanded="false">pull</button>
+        </article>
+        <div class="pocket" aria-hidden="true"></div>
+        <div class="flap" aria-hidden="true"></div>
+      </div>
+      <p class="hint" id="hint">drag the tab</p>
+    </div>
+  </main>
+
+  <footer class="shelf-wrap">
+    <div class="jars">
+      <button class="jar" type="button" data-jar="encouragement">
+        <span class="lid" aria-hidden="true"></span>
+        <span class="jar-body">
+          <canvas class="icon" data-icon="heart" width="16" height="16" aria-hidden="true"></canvas>
+        </span>
+        <span class="jar-caption">encouragement</span>
+      </button>
+      <button class="jar" type="button" data-jar="jokes">
+        <span class="lid" aria-hidden="true"></span>
+        <span class="jar-body">
+          <canvas class="icon" data-icon="star" width="16" height="16" aria-hidden="true"></canvas>
+        </span>
+        <span class="jar-caption">dad jokes</span>
+      </button>
+      <button class="jar" type="button" data-jar="memories">
+        <span class="lid" aria-hidden="true"></span>
+        <span class="jar-body">
+          <canvas class="icon" data-icon="frame" width="16" height="16" aria-hidden="true"></canvas>
+        </span>
+        <span class="jar-caption">memory lane</span>
+      </button>
+    </div>
+    <div class="shelf" aria-hidden="true"></div>
+  </footer>
+
+  <dialog id="panel" aria-labelledby="panel-title">
+    <div class="panel-frame">
+      <header class="panel-bar">
+        <h2 id="panel-title"></h2>
+        <button class="pixel-btn" id="panel-close" type="button">close</button>
+      </header>
+      <div id="panel-body"></div>
+    </div>
+  </dialog>
+
+  <script src="content.js"></script>
+  <script src="sprites.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
